@@ -2,7 +2,36 @@
 
 Cinezy is a sleek, modern web application for discovering movies and TV series. It provides comprehensive details like plot summaries, cast, ratings, and more, all wrapped in a dynamic and interactive user interface. Powered by a Flask backend and the OMDB API, Cinezy offers an immersive experience with its animated starfield background and asynchronous search.
 
-**[➡️ View the Live Demo](https://cinezy.vercel.app/)**
+---
+## ↗️ View the Live Demo: [cinezy.vercel.app](https://cinezy.vercel.app/)
+
+<table align="center" cellspacing="0" cellpadding="0" style="border: none; border-collapse: collapse;">
+  <tr>
+    <td style="border: none; padding: 0;">
+      <img src="https://github.com/user-attachments/assets/131c8029-e017-49c8-ba08-ba26bb0f09cc" alt="Screenshot 1" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
+    </td>
+  </tr>
+  <tr>
+    <td style="border: none; padding: 0;">
+      <img src="https://github.com/user-attachments/assets/9e7e000e-9705-45a4-a2ef-1a57fe8c5127" alt="Screenshot 2" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
+    </td>
+  </tr>
+  <tr>
+    <td style="border: none; padding: 0;">
+      <img src="https://github.com/user-attachments/assets/749b4852-fd0f-42e5-9764-daa66758278e" alt="Screenshot 2" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
+    </td>
+  </tr>
+  <tr>
+    <td style="border: none; padding: 0;">
+      <img src="https://github.com/user-attachments/assets/0179ba9a-5768-47cf-a99b-c5bdf073c81f" alt="Screenshot 3" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
+    </td>
+  </tr>
+  <tr>
+    <td style="border: none; padding: 0;">
+      <img src="https://github.com/user-attachments/assets/3f45877f-5be2-4ae2-a5a1-c56aca4f3fbc" alt="Screenshot 3" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
+    </td>
+  </tr>
+</table>
 
 ## ✨ Features
 
