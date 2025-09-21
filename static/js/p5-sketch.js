@@ -1,8 +1,6 @@
 let stars = [];
 let speed = 0;
-let targetSpeed = 3;
-
-
+let targetSpeed = 3.5;
 let bgColor, starColor, lineColor;
 
 function setColors(theme) {
@@ -48,7 +46,6 @@ function windowResized() {
     let container = document.getElementById('p5-canvas-container');
     resizeCanvas(container.offsetWidth, container.offsetHeight);
 
-
     stars = [];
     for (let i = 0; i < 800; i++) {
         stars.push(new Star());
@@ -82,12 +79,10 @@ class Star {
         const sy = map(this.y / this.z, 0, 1, 0, height);
         const r = map(this.z, 0, width, 6, 0.5);
 
-
         let twinkle = sin(frameCount * 0.1 + this.z) * 50 + 205;
         fill(red(starColor), green(starColor), blue(starColor), twinkle);
         noStroke();
         ellipse(sx, sy, r, r);
-
 
         const px = map(this.x / this.pz, 0, 1, 0, width);
         const py = map(this.y / this.pz, 0, 1, 0, height);
