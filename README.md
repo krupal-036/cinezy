@@ -8,27 +8,27 @@ Cinezy is a sleek, modern web application for discovering movies and TV series. 
 <table align="center" cellspacing="0" cellpadding="0" style="border: none; border-collapse: collapse;">
   <tr>
     <td style="border: none; padding: 0;">
-      <img src="https://github.com/user-attachments/assets/131c8029-e017-49c8-ba08-ba26bb0f09cc" alt="Screenshot 1" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
+      <img src="https://github.com/user-attachments/assets/bd66c979-f9af-460d-aafc-d5615d945f8c" alt="Screenshot 1" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
     </td>
   </tr>
   <tr>
     <td style="border: none; padding: 0;">
-      <img src="https://github.com/user-attachments/assets/9e7e000e-9705-45a4-a2ef-1a57fe8c5127" alt="Screenshot 2" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
+      <img src="https://github.com/user-attachments/assets/facf47cd-1c14-4a76-95be-9fecdd18ba0d" alt="Screenshot 2" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
     </td>
   </tr>
   <tr>
     <td style="border: none; padding: 0;">
-      <img src="https://github.com/user-attachments/assets/749b4852-fd0f-42e5-9764-daa66758278e" alt="Screenshot 2" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
+      <img src="https://github.com/user-attachments/assets/49f9e7b6-13ea-4a4f-ae78-01afe25f169d" alt="Screenshot 3" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
     </td>
   </tr>
   <tr>
     <td style="border: none; padding: 0;">
-      <img src="https://github.com/user-attachments/assets/0179ba9a-5768-47cf-a99b-c5bdf073c81f" alt="Screenshot 3" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
+      <img src="https://github.com/user-attachments/assets/4d87d988-ecf4-456b-8caf-4876412932b5" alt="Screenshot 4" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
     </td>
   </tr>
   <tr>
     <td style="border: none; padding: 0;">
-      <img src="https://github.com/user-attachments/assets/3f45877f-5be2-4ae2-a5a1-c56aca4f3fbc" alt="Screenshot 3" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
+      <img src="https://github.com/user-attachments/assets/852c0db4-4df1-482b-8532-f01bbeddaa55" alt="Screenshot 5" style="width: 100%; display: block; margin: 0; padding: 0; border: none;">
     </td>
   </tr>
 </table>
@@ -61,7 +61,7 @@ Cinezy is a sleek, modern web application for discovering movies and TV series. 
 ```
 
 cinezy/
-├── app.py                  # Flask backend logic
+├── app.py                  # Flask backend logic (main entry point)
 ├── static/
 │ ├── css/
 │ │     └── style.css       # All styles for the application
@@ -71,6 +71,7 @@ cinezy/
 ├── templates/
 │       └── index.html      # Main HTML file rendered by Flask
 ├── build.sh                # Build script for Vercel
+├── .gitignore              # Git Ignore file
 ├── requirements.txt        # Python dependencies
 ├── vercel.json             # Vercel deployment configuration
 ├── LICENCE                 # MIT LICENCE
