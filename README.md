@@ -146,6 +146,12 @@ This project is licensed under the **MIT License** — feel free to use and modi
 
 Developed with ❤️ by [Krupal Fataniya](https://github.com/krupal-036).
 
-Feel free to contribute or fork the project!
 
-For any issues or questions, feel free to ask [Krupal](mailto:krupalfataniya007@gmail.com). 😊
+## 🤝 Contributing
+
+Contributions are always welcome!  
+
+Feel free to **fork** this repository, **open issues**, or **submit pull requests** to help improve the project.  
+
+For any questions, suggestions, or issues, feel free to reach out to [**Krupal**](mailto:krupalfataniya007@gmail.com). 😊
+
