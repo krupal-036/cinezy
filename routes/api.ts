@@ -1,7 +1,7 @@
 import { Router, Request, Response, NextFunction } from 'express';
 import { z } from 'zod';
-import { omdbService } from '../services/omdb';
-import { AppError, ValidationError } from '../utils/errors';
+import { omdbService } from '../services/omdb.js';
+import { AppError, ValidationError } from '../utils/errors.js';
 
 const router = Router();
 

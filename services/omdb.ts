@@ -1,7 +1,8 @@
 import axios from 'axios';
+import type { AxiosError } from 'axios';
 import dotenv from 'dotenv';
-import { OMDBMovieDetail, OMDBSearchResponse } from '../types';
-import { AppError, APIKeyError } from '../utils/errors';
+import { OMDBMovieDetail, OMDBSearchResponse } from '../types/index.js';
+import { AppError, APIKeyError } from '../utils/errors.js';
 
 dotenv.config();
 
@@ -76,18 +77,18 @@ class OMDbService {
 
     for (const apiKey of shuffledKeys) {
       try {
-        const response = await axios.get(OMDB_API_URL, {
+        const response = await axios.get<any>(OMDB_API_URL, {
           params: { ...params, apikey: apiKey },
           timeout
         });
 
-        const data = response.data;
+        const data: any = response.data;
 
         if (data.Response === 'True') {
           return data as T;
         }
 
-        const omdbErrorMsg = data.Error || 'Unknown error from OMDB API.';
+        const omdbErrorMsg: string = data.Error || 'Unknown error from OMDB API.';
         if (
           omdbErrorMsg.toLowerCase().includes('request limit reached') ||
           omdbErrorMsg.toLowerCase().includes('invalid api key')
@@ -98,13 +99,18 @@ class OMDbService {
         } else {
           throw new AppError(500, omdbErrorMsg);
         }
-      } catch (error) {
-        if (error instanceof AppError) throw error;
-        if (axios.isAxiosError(error)) {
-          console.warn(`Request failed: ${error.message}. Trying next key.`);
-          lastOperationalError = `Network request to OMDB API failed: ${error.message}`;
+      } catch (error: any) {
+        if (error instanceof AppError) {
+          throw error;
+        }
+
+        if (error && error.isAxiosError) {
+          const errorMessage = error.message || 'Unknown network error';
+          console.warn(`Request failed: ${errorMessage}. Trying next key.`);
+          lastOperationalError = `Network request to OMDB API failed: ${errorMessage}`;
           continue;
         }
+
         throw error;
       }
     }
@@ -152,7 +158,7 @@ class OMDbService {
     );
 
     if (data.Search && data.Search.length > 0) {
-      return data.Search.slice(0, 5).map(item => ({
+      return data.Search.slice(0, 5).map((item: any) => ({
         title: item.Title,
         year: item.Year
       }));

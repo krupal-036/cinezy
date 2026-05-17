@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --font-sans: 'Inter', 'system-ui', '-apple-system', 'sans-serif';
+    --font-display: 'Poppins', 'system-ui', '-apple-system', 'sans-serif';
+
+    --color-dark-bg: #0d1117;
+    --color-dark-card: #161b22;
+    --color-dark-border: #30363d;
+    --color-dark-text: #e6edf3;
+    --color-dark-text-secondary: #9ca6b3;
+
+    --color-light-bg: #ffffff;
+    --color-light-card: #f6f8fa;
+    --color-light-border: #d0d7de;
+    --color-light-text: #1a1a1a;
+    --color-light-text-secondary: #4f5b66;
+
+    --color-accent: #ff7043;
+    --color-accent-hover: #ff9e80;
+
+    --animate-fade-in-up: fadeInUp 0.8s ease both;
+    --animate-fade-in: fadeIn 0.5s ease;
+    --animate-slide-in: slideIn 0.3s ease;
+
+    @keyframes fadeInUp {
+
+        0%,
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        100%,
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeIn {
+
+        0%,
+        from {
+            opacity: 0;
+        }
+
+        100%,
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+
+    body {
+        font-family: var(--font-sans);
+        overflow-x: hidden;
+    }
+
+    body.overflow-hidden {
+        overflow: hidden;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500 dark:bg-gray-500;
+}
+
+::selection {
+    background-color: color-mix(in srgb, var(--color-accent) 30%, transparent);
+    color: var(--color-light-text);
+}
+
+.dark ::selection {
+    color: var(--color-dark-text);
+}
