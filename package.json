@@ -9,7 +9,7 @@
         "build:frontend": "cd frontend && npm run build",
         "clean": "shx rm -rf public && shx mkdir public",
         "copy": "shx cp -r frontend/dist/* public/",
-        "build": "npm run build:backend && npm run clean && npm run build:frontend && npm run copy && npm run generate:sitemap",
+        "build": "npm run build:backend && npm run clean && npm run build:frontend && npm run generate:sitemap && npm run copy",
         "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,magenta\" \"tsx watch index.ts\" \"cd frontend && npm run dev\""
     },
     "dependencies": {
