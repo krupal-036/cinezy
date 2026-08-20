@@ -4,11 +4,12 @@
     "scripts": {
         "dev:backend": "tsx watch index.ts",
         "build:backend": "tsc",
+        "generate:sitemap": "node scripts/generate-sitemap.js",
         "start": "node dist/index.js",
         "build:frontend": "cd frontend && npm run build",
         "clean": "shx rm -rf public && shx mkdir public",
         "copy": "shx cp -r frontend/dist/* public/",
-        "build": "npm run build:backend && npm run clean && npm run build:frontend && npm run copy",
+        "build": "npm run build:backend && npm run clean && npm run build:frontend && npm run copy && npm run generate:sitemap",
         "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"blue,magenta\" \"tsx watch index.ts\" \"cd frontend && npm run dev\""
     },
     "dependencies": {
